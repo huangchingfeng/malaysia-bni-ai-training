@@ -880,31 +880,103 @@ body {
 
 /* Footer */
 .footer {
-    padding: 48px 24px;
+    padding: 60px 24px 40px;
     background: #1a1a2e;
     color: white;
 }
 
-.footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 24px;
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-content p {
+.footer-section h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #667eea;
+}
+
+.footer-section p {
     color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+    font-size: 0.95rem;
 }
 
-.footer-date {
+.footer-name {
+    font-size: 1.15rem !important;
+    font-weight: 600;
+    color: white !important;
+}
+
+.footer-quote {
+    font-style: italic;
     color: #667eea !important;
-    font-weight: 500;
+    margin-top: 12px !important;
 }
 
-.footer-instructor p {
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-contact a {
     color: rgba(255, 255, 255, 0.7);
-    text-align: right;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+    color: #667eea;
+}
+
+.contact-icon {
+    font-size: 1.1rem;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #667eea;
+}
+
+.social-icon {
+    font-size: 1.1rem;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+}
+
+.footer-copyright {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5) !important;
 }
 
 /* Responsive */
@@ -945,12 +1017,14 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .footer .container {
-        flex-direction: column;
+    .footer-grid {
+        grid-template-columns: 1fr;
         text-align: center;
+        gap: 32px;
     }
 
-    .footer-instructor p {
-        text-align: center;
+    .footer-contact,
+    .footer-social {
+        align-items: center;
     }
 }
